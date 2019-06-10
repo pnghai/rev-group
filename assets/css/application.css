@@ -272,7 +272,8 @@ a:hover {
 
 section {
   color: #828690;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 100px 0;
 }
 
