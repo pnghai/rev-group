@@ -121,6 +121,9 @@ a {
 .fixed-shadow {
   box-shadow: 1px 1px 4px 0px #cccccc;
 }
+.navbar-light .navbar-toggler {
+  background-color: $main-yellow;
+}
 .top-menu {
   background-color: #fff;
   position: relative;
@@ -286,6 +289,7 @@ section {
       display: block;
       img {
         height: 50px;
+        width: auto;
         padding: 5px;
         transition: .5s;
         -moz-transition: .5s;
@@ -419,7 +423,7 @@ section {
     margin-bottom: 50px;
     .testimonial-content {
       text-align: center;
-      width: 90%;
+      width: 70%;
       margin: 0 auto;
       .img-wrapper {
         width: 106px;
@@ -748,14 +752,36 @@ footer {
   }
   .content {
     padding: 100px 40px;
-    .footer-item {
+    a.footer-item {
       color: rgba(255, 255, 255, .6);
       display: block;
       line-height: 2;
       font-weight: 300;
-      transition: 5s;
-      -webkit-transition: 5s;
-      -moz-transition: 5s;
+      transition: .5s;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        content: '';
+        background-color: $main-yellow;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+      }
+      &:hover {
+        color: $main-yellow;
+        &:before {
+          color: $main-yellow;
+          right: 0;
+          width: 50px;
+        }
+      }
     }
   }
   address {
@@ -772,4 +798,97 @@ footer {
       margin-right: 10px;
     }
   }
+}
+
+#to-top {
+  position: fixed;
+  bottom: -60px;
+  right: 20px;
+  z-index: 99;
+  font-size: 30px;
+  outline: none;
+  background-color: #ffc02e;
+  color: #171d21;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  border-radius: 0;
+  &:hover {
+    background-color: #171d21;
+    color: #fff;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 0;
+    .title-section {
+      font-size: 36px;
+    }
+  }
+  .introduction {
+    .section-content {
+      h1.title {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      .brief {
+        font-size: 20px;
+      }
+      .rev-projects a img {
+        height: 40px;
+      }
+    } 
+  }
+  .blockchain .blockchain-list .blockchain-item {
+    padding: 20px;
+  }
+  .advisors .advisors-list {
+    padding: 20px;
+    .advisor-item {
+      margin-bottom: 30px;
+    }
+  }
+  .rev-group {
+    .rev-group-item {
+      padding: 20px;
+      text-align: justify;
+    }
+    .title-rev-group {
+      font-size: 28px;
+    }
+  } 
+  .revex .content {
+    padding: 10px;
+    .btn-view-all {
+      margin-top: 10px;
+    }
+  }
+  .revz .content {
+    margin: 20px auto;
+    padding: 10px;
+  }
+  footer {
+    .content {
+      padding: 40px 20px;
+    }
+    .footer-logo {
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .contact {
+      width: 100% !important;
+      padding: 30px;
+    }
+  } 
 }

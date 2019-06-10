@@ -140,6 +140,10 @@ a:hover {
   box-shadow: 1px 1px 4px 0px #cccccc;
 }
 
+.navbar-light .navbar-toggler {
+  background-color: #FFC02F;
+}
+
 .top-menu {
   background-color: #fff;
   position: relative;
@@ -331,6 +335,7 @@ section .title-section {
 
 .introduction .rev-projects a img {
   height: 50px;
+  width: auto;
   padding: 5px;
   transition: .5s;
   -moz-transition: .5s;
@@ -470,7 +475,7 @@ section .title-section {
 
 .testimonial .swiper-testimonial .testimonial-content {
   text-align: center;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -823,14 +828,39 @@ footer .content {
   padding: 100px 40px;
 }
 
-footer .content .footer-item {
+footer .content a.footer-item {
   color: rgba(255, 255, 255, 0.6);
   display: block;
   line-height: 2;
   font-weight: 300;
-  transition: 5s;
-  -webkit-transition: 5s;
-  -moz-transition: 5s;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  position: relative;
+}
+
+footer .content a.footer-item:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  content: '';
+  background-color: #FFC02F;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+}
+
+footer .content a.footer-item:hover {
+  color: #FFC02F;
+}
+
+footer .content a.footer-item:hover:before {
+  color: #FFC02F;
+  right: 0;
+  width: 50px;
 }
 
 footer address {
@@ -848,4 +878,90 @@ footer a {
 
 footer a .img-wrapper {
   margin-right: 10px;
+}
+
+#to-top {
+  position: fixed;
+  bottom: -60px;
+  right: 20px;
+  z-index: 99;
+  font-size: 30px;
+  outline: none;
+  background-color: #ffc02e;
+  color: #171d21;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  border-radius: 0;
+}
+
+#to-top:hover {
+  background-color: #171d21;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+  section .title-section {
+    font-size: 36px;
+  }
+  .introduction .section-content h1.title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  .introduction .section-content h2 {
+    font-size: 40px;
+  }
+  .introduction .section-content .brief {
+    font-size: 20px;
+  }
+  .introduction .section-content .rev-projects a img {
+    height: 40px;
+  }
+  .blockchain .blockchain-list .blockchain-item {
+    padding: 20px;
+  }
+  .advisors .advisors-list {
+    padding: 20px;
+  }
+  .advisors .advisors-list .advisor-item {
+    margin-bottom: 30px;
+  }
+  .rev-group .rev-group-item {
+    padding: 20px;
+    text-align: justify;
+  }
+  .rev-group .title-rev-group {
+    font-size: 28px;
+  }
+  .revex .content {
+    padding: 10px;
+  }
+  .revex .content .btn-view-all {
+    margin-top: 10px;
+  }
+  .revz .content {
+    margin: 20px auto;
+    padding: 10px;
+  }
+  footer .content {
+    padding: 40px 20px;
+  }
+  footer .footer-logo {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  footer .contact {
+    width: 100% !important;
+    padding: 30px;
+  }
 }
