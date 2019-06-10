@@ -1,0 +1,65 @@
+/*New widget currency*/
+.currency {
+  position: relative;
+  background: #FAFAFA;
+  padding: 6rem 0;
+}
+.currency h2 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1.19px;
+ }
+.currency__wrapper .currency__item  {
+  background-color: #fff;
+	box-sizing: border-box;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(148, 121, 15, 0.2), 0 2px 6px 0 rgba(148, 121, 15, 0.2);
+  cursor: pointer;
+  color: #130928;
+  position: relative;
+  width: 18%;
+  margin: 1%;
+}
+
+.currency__wrapper .currency__item .item-wrapper {
+	padding: 15px;
+}
+@media screen and (max-width: 768px) {
+	.currency__wrapper .currency__item .item-wrapper {
+		padding: 8px;
+	}
+	.currency__wrapper .currency__item .item-name {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 580px) {
+	.currency__wrapper .currency__item  {
+    width: 30%;
+    margin: 2% 1%;
+	}
+}
+.currency__wrapper .currency__item canvas {
+	position: relative;
+  bottom: -10px !important;
+  left: -10px;
+  width: calc(100% + 10px) !important;
+	
+}
+.currency__wrapper .currency__item .item-name {
+  justify-content: space-between;
+  line-height: 30px;
+}
+.currency__wrapper .currency__item .item-name img {
+	height: 30px;
+	width: 30px;
+	padding: 4px;
+}
+
+.currency__wrapper .currency__item .item-info {
+
+}
+/*
+.currency__wrapper .currency__item {}
+.currency__wrapper .currency__item {}
+.currency__wrapper .currency__item {}*/
