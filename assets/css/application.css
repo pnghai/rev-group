@@ -187,7 +187,8 @@ a:hover {
   color: #fff;
 }
 
-.top-menu .menu .nav-item .nav-link:hover {
+.top-menu .menu .nav-item .nav-link:hover,
+.top-menu .menu .nav-item .nav-link:focus {
   color: rgba(255, 255, 255, 0.85);
 }
 

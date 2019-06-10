@@ -160,7 +160,8 @@ a {
 .top-menu .menu .nav-item.active .nav-link {
   color: #fff;
 }
-.top-menu .menu .nav-item .nav-link:hover {
+.top-menu .menu .nav-item .nav-link:hover,
+.top-menu .menu .nav-item .nav-link:focus {
   color: rgba(255, 255, 255, .85);
 }
 .top-menu .menu .nav-link {
