@@ -576,6 +576,10 @@ section .title-section {
   line-height: 1.5;
 }
 
+.advisors {
+  background-color: #f8f9fa;
+}
+
 .advisors .advisors-list {
   padding: 80px 10px 40px 0;
   max-width: 500px;
@@ -624,9 +628,28 @@ section .title-section {
   -webkit-transition: .5s;
 }
 
+.advisors .advisors-list .btn-hover span {
+  transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+}
+
+.advisors .advisors-list .btn-hover:hover span i {
+  cursor: pointer;
+  background-color: #171D22;
+  color: #FFC02F;
+}
+
 .advisors .advisors-list .btn-more {
   color: #171D22;
   font-size: 17px;
+  transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+}
+
+.advisors .advisors-list .btn-more:hover {
+  color: #FFC02F;
 }
 
 .rev-group .title-rev-group {
@@ -809,6 +832,8 @@ section .title-section {
   max-width: 500px;
   margin: 40px auto;
   padding: 40px 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .revz .title-rev-group {

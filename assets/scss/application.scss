@@ -517,8 +517,8 @@ section {
     }
   }
 }
-
 .advisors {
+  background-color: #f8f9fa;
   .advisors-list {
     padding: 80px 10px 40px 0;
     max-width: 500px;
@@ -530,6 +530,7 @@ section {
         font-weight: 400;
         font-size: 20px;
       }
+
       .img-wrapper {
         margin: 15px auto 20px;
         width: 85px;
@@ -559,10 +560,28 @@ section {
         }
       }
     }
+    .btn-hover {
+      span {
+        transition: .5s;
+        -moz-transition: .5s;
+        -webkit-transition: .5s;
+      }
+      
+      &:hover span i {
+        cursor: pointer;
+        background-color: $main-color;
+        color: $main-yellow;
+      }
+    }
     .btn-more {
       color: $main-color;
       font-size: 17px;
-  
+      transition: .5s;
+      -moz-transition: .5s;
+      -webkit-transition: .5s;
+      &:hover {
+        color: $main-yellow;
+      }
     }
   }
 }
@@ -736,6 +755,8 @@ section {
     max-width: 500px;
     margin: 40px auto;
     padding: 40px 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .title-rev-group {
     margin-top: 20px;
