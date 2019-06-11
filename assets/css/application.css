@@ -852,6 +852,10 @@ footer .footer-title {
   margin-bottom: 15px;
 }
 
+footer .footer-logo {
+  padding-top: 0 !important;
+}
+
 footer .content {
   padding: 100px 40px;
 }
