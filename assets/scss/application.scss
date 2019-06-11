@@ -856,6 +856,7 @@ footer {
   .map .services {
     display: flex;
     justify-content: space-around;
+
   }
   .blockchain .blockchain-list .blockchain-item {
     padding: 20px;
@@ -899,6 +900,7 @@ footer {
     .footer-logo {
       padding: 30px;
       margin-bottom: 30px;
+      padding-top: 0 !important;
     }
   } 
 }

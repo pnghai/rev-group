@@ -973,6 +973,7 @@ footer a .img-wrapper {
   footer .footer-logo {
     padding: 30px;
     margin-bottom: 30px;
+    padding-top: 0 !important;
   }
 }
 
