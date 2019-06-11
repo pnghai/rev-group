@@ -652,6 +652,7 @@ section .title-section {
   width: 98%;
   max-width: 1366px;
   margin: 0 auto;
+  min-height: 250px;
 }
 
 .revollet .rev-timeline .timeline .events-wrapper {
@@ -929,6 +930,10 @@ footer a .img-wrapper {
   .introduction .section-content .rev-projects a img {
     height: 40px;
   }
+  .map .services {
+    display: flex;
+    justify-content: space-around;
+  }
   .blockchain .blockchain-list .blockchain-item {
     padding: 20px;
   }
@@ -940,7 +945,10 @@ footer a .img-wrapper {
   }
   .rev-group .rev-group-item {
     padding: 20px;
-    text-align: justify;
+    text-align: left;
+  }
+  .rev-group .rev-group-item .content {
+    text-align: left !important;
   }
   .rev-group .title-rev-group {
     font-size: 28px;
@@ -955,12 +963,35 @@ footer a .img-wrapper {
     margin: 20px auto;
     padding: 10px;
   }
+  .news article .img-wrapper img {
+    width: 100%;
+    height: auto;
+  }
   footer .content {
     padding: 40px 20px;
   }
   footer .footer-logo {
     padding: 30px;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .revollet .rev-content .rev-content-inner {
+    padding: 10px;
+  }
+  .hawaii .col {
+    padding: 0;
+  }
+  .blockchain .blockchain-list .blockchain-item img {
+    width: 60px !important;
+  }
+  .map .title-small small {
+    font-size: 18px !important;
+  }
+  section.advisors {
+    padding-bottom: 0 !important;
+    background-color: #f8f9fa;
   }
   footer .contact {
     width: 100% !important;
