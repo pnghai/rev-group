@@ -959,110 +959,9 @@ footer {
     }
   } 
 }
-
-
-// .timeline {
-//   position: relative;
-//   &::before {
-//     content: '';
-//     background: #E3E6ED;
-//     width: 3px;
-//     height: 95%;
-//     position: absolute;
-//     left:30px;
-//   }
-//   #progress-bar {
-//     position: absolute;
-//     top: 0;
-//     width: 3px;
-//     background: #ffc02e;
-//     left: 30px;
-//   }
-// }
-
-// .timeline-item {
-//   width: 100%;
-//   margin-bottom: 70px;
-
-//   &::after {
-//     content: '';
-//     display: block;
-//     clear: both;
-//   }
-// }
-
-
-// .timeline-content {
-//   position: relative;
-//   width: 100%;
-// }
-
-// .timeline-img {
-//   width: 30px;
-//   height: 30px;
-//   border: 5px solid #fff;
-//   background-color: #E3E6ED;
-//   border-radius: 50%;
-//   position: absolute;
-//   left: 30px;
-//   margin-top: 25px;
-//   margin-left: -13px;
-//   &.active {
-//     background: $main-yellow;
-//   }
-//   .time-point {
-//     color: $main-color;
-//     position: absolute;
-//     left: 100%;
-//     width: max-content;
-//     display: block;
-//     padding: 5px 10px;
-//     span {
-//       color: #828690;
-//       clear: both;
-//       display: block;
-//     }
-//   }
-// }
-
-
-
-// .timeline-img-header {
-
-//   height: 200px;
-//   position: relative;
-//   margin-bottom: 20px;
-
-//   h2 {
-//     color: #000;
-//     position: absolute;
-//     bottom: 5px;
-//     left: 20px;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-
-//   .timeline {
-
-//     &::before {
-//       left: 50px;
-//     }
-
-//     .timeline-img {
-//       left: 50px;
-//     }
-
-//     .timeline-content {
-//       max-width: 100%;
-//       width: auto;
-//       margin-left: 20px;
-//     }
-//   }
-  
-// }
-
-
+#WS-SL--content section {
+  padding: 30px 0;
+}
 #WS-ScroLi {
   position: absolute; 
   z-index: 98;
@@ -1070,9 +969,6 @@ footer {
 #WS-ScroLi.fixed {
   position: fixed; 
   top: 10% !important;
-  // transform: translateY(-50%);
-  // -moz-transform: translateY(-50%);
-  // -webkit-transform: translateY(-50%);
 }
 #WS-ScroLi.asbolute {
   position: absolute; 
@@ -1110,13 +1006,6 @@ footer {
 #WS-ScroLi [class^="item"] .line-animation {
   z-index: 999; 
 }
-// #WS-ScroLi [class^="item"].reading {
-//   color: red;
-//   border-color: red; 
-// }
-// #WS-ScroLi [class^="item"].reading .line, #WS-ScroLi [class^="item"].reading .line-animation {
-//   background: red; 
-// }
 #WS-ScroLi [class^="item"].past {
   .time-point, .time-point span {
     color: #ffc02e; 

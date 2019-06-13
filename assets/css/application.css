@@ -913,6 +913,10 @@ footer a .img-wrapper {
   }
 }
 
+#WS-SL--content section {
+  padding: 30px 0;
+}
+
 #WS-ScroLi {
   position: absolute;
   z-index: 98;
