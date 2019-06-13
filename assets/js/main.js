@@ -39,23 +39,3 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-
-
-$("#timeline-control li").on("click", function(event) {
-  let self = $(this);
-  let timelineID = $(this).find("a").attr("data-date");
-
-  $("#timeline-content").find("li").each(function(){
-    if ($(this).attr("data-date") === timelineID) {
-      $("#timeline-control li").removeClass("selected",  "slow" );
-      $("#timeline-content").find("li").hide( "slow" );
-      self.addClass("selected", "slow" );
-      $(".filling-line").animate({
-        height: self.position().top + "px"
-      }, 500);
-
-      $(this).show( "slow" );
-    }
-  })
-});
