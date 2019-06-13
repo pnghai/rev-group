@@ -647,6 +647,27 @@ section .title-section {
   color: #FFC02F;
 }
 
+.rev-group {
+  position: relative;
+}
+
+.rev-group #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+
+.rev-group .rev-group-list {
+  position: relative;
+  z-index: 2;
+}
+
 .rev-group .title-rev-group {
   font-size: 38px;
   font-weight: 400;
