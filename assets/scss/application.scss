@@ -986,7 +986,6 @@ footer {
   }
 }
 #WS-ScroLi .time-point {
-  // background-color: #fff;
   font-size: 14px;
   padding: 5px;
   position: absolute;
@@ -1006,11 +1005,11 @@ footer {
 #WS-ScroLi [class^="item"] .line-animation {
   z-index: 999; 
 }
-#WS-ScroLi [class^="item"].past {
-  .time-point, .time-point span {
-    color: #ffc02e; 
-  }
-}
+// #WS-ScroLi [class^="item"].past {
+//   .time-point, .time-point span {
+//     color: #ffc02e; 
+//   }
+// }
 #WS-ScroLi [class^="item"].current {
   border-width: 3px;
   color: #ffc02e;

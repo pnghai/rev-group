@@ -969,10 +969,6 @@ footer a .img-wrapper {
   z-index: 999;
 }
 
-#WS-ScroLi [class^="item"].past .time-point, #WS-ScroLi [class^="item"].past .time-point span {
-  color: #ffc02e;
-}
-
 #WS-ScroLi [class^="item"].current {
   border-width: 3px;
   color: #ffc02e;
