@@ -262,6 +262,8 @@
                 [ '#anchor-4', 'fas fa-exclamation' ],
                 [ '#anchor-5', 'fas fa-exclamation' ],
                 [ '#anchor-6', 'fas fa-exclamation' ],
+                [ '#anchor-7', 'fas fa-exclamation' ],
+                [ '#anchor-8', 'fas fa-exclamation' ],
             ],
 
         };
