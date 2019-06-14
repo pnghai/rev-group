@@ -295,10 +295,10 @@ section {
 }
 
 .circle.small{
-  width: 100px;
-  height: 100px;
-  left: -50px;
-  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
 }
 
 .medium{
@@ -406,7 +406,7 @@ section {
 //   width: 100vw;
 //   height: 90vh;
 //   color: #fff;
-//   background: linear-gradient(-45deg, #171d21, #29333a, #354048, #171d21);
+//   background: linear-gradient(-45deg, $main-color, #29333a, #354048, #171d21);
 //   background-size: 400% 400%;
 //   -webkit-animation: Gradient 15s ease infinite;
 //   -moz-animation: Gradient 15s ease infinite;
@@ -464,39 +464,39 @@ section {
   width: 100%;
   position: relative;
   overflow: hidden;
-  // .layers {
-  //   display: flex;
-  //   position: absolute;
-  //   height: 100%;
-  //   z-index: 9;
-  //   width: 100%;
-  //   .layer {
-  //     animation:slide 5s ease-in-out infinite alternate;
-  //     background-image: linear-gradient(90deg, #171D22 90%, #3a4950 80%);
-  //     bottom:0;
-  //     left:-50%;
-  //     opacity:.5;
-  //     position:absolute;
-  //     right:-50%;
-  //     width: 200%;
-  //     top:0;
-  //     z-index:-1;
-  //   }
-  //   .layer-1 {
-  //     animation-direction:alternate;
-  //     animation-duration:8s;
-  //   }
-  //   .layer-2 {
-  //      animation-duration:4s;
-  //     // right:10%;
-  //   }
-  //     // .layer-3 {
-  //     //   animation-direction:alternate-reverse;
-  //     //   animation-duration:5s;
-  //     //   // right:-10%;
-  //     // }
+  .layers {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    z-index: 9;
+    width: 100%;
+    .layer {
+      animation:slide 5s ease-in-out infinite alternate;
+      background-image: linear-gradient(90deg, #171D22 50%, #3a4950 80%);
+      bottom:0;
+      left:-50%;
+      opacity:.5;
+      position:absolute;
+      right:-50%;
+      width: 200%;
+      top:0;
+      z-index:-1;
+    }
+    .layer-1 {
+      animation-direction:alternate;
+      animation-duration:8s;
+    }
+    .layer-2 {
+       animation-duration:4s;
+      // right:10%;
+    }
+      // .layer-3 {
+      //   animation-direction:alternate-reverse;
+      //   animation-duration:5s;
+      //   // right:-10%;
+      // }
 
-  // }
+  }
   .section-content {
     // background: #171d21;
     // padding: 20px;

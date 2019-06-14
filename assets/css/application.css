@@ -297,10 +297,10 @@ section .title-section {
 }
 
 .circle.small {
-  width: 100px;
-  height: 100px;
-  left: -50px;
-  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
 }
 
 .medium {
@@ -419,6 +419,36 @@ section .title-section {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.introduction .layers {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  z-index: 9;
+  width: 100%;
+}
+
+.introduction .layers .layer {
+  animation: slide 5s ease-in-out infinite alternate;
+  background-image: linear-gradient(90deg, #171D22 50%, #3a4950 80%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: absolute;
+  right: -50%;
+  width: 200%;
+  top: 0;
+  z-index: -1;
+}
+
+.introduction .layers .layer-1 {
+  animation-direction: alternate;
+  animation-duration: 8s;
+}
+
+.introduction .layers .layer-2 {
+  animation-duration: 4s;
 }
 
 .introduction .section-content {
