@@ -288,10 +288,125 @@ section .title-section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 20s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small {
+  width: 100px;
+  height: 100px;
+  left: -50px;
+  bottom: -50px;
+}
+
+.medium {
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.large {
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.xlarge {
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xxlarge {
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.2;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
 .introduction {
   height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
+}
+
+.introduction .layers {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  z-index: 9;
+  width: 100%;
+}
+
+.introduction .layers .layer {
+  animation: slide 5s ease-in-out infinite alternate;
+  background-image: linear-gradient(90deg, #171D22 90%, #3a4950 80%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: absolute;
+  right: -50%;
+  width: 200%;
+  top: 0;
+  z-index: -1;
+}
+
+.introduction .layers .layer-1 {
+  animation-direction: alternate;
+  animation-duration: 8s;
+}
+
+.introduction .layers .layer-2 {
+  animation-duration: 4s;
 }
 
 .introduction .section-content {
@@ -302,6 +417,7 @@ section .title-section {
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   max-width: 100%;
+  z-index: 10;
 }
 
 .introduction .section-content h1.title {
@@ -309,7 +425,80 @@ section .title-section {
   font-weight: 400;
   display: inline-block;
   padding: 10px 20px;
-  border: 5px solid #FFC02F;
+  position: relative;
+}
+
+.introduction .section-content h1.title .square .line {
+  background-color: #FFC02F;
+  position: absolute;
+}
+
+.introduction .section-content h1.title .square .line-1 {
+  right: 0px;
+  top: 0px;
+  height: 5px;
+  width: 0;
+  -webkit-transition: width .5s linear;
+  transition: width .5s linear;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.introduction .section-content h1.title .square .line-2 {
+  right: 0px;
+  bottom: 0px;
+  height: 0px;
+  width: 5px;
+  -webkit-transition: height .5s linear;
+  transition: height .5s linear;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.introduction .section-content h1.title .square .line-3 {
+  right: 0px;
+  bottom: 0px;
+  height: 5px;
+  width: 0;
+  -webkit-transition: width .5s linear;
+  transition: width .5s linear;
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+}
+
+.introduction .section-content h1.title .square .line-4 {
+  left: 0px;
+  bottom: 0px;
+  height: 0px;
+  width: 5px;
+  -webkit-transition: height .5s linear;
+  transition: height .5s linear;
+  -webkit-transition-delay: .75s;
+  transition-delay: .75s;
+}
+
+.introduction .section-content h1.title .square.animation .line-1 {
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
+  width: 100%;
+}
+
+.introduction .section-content h1.title .square.animation .line-2 {
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+  height: 100%;
+}
+
+.introduction .section-content h1.title .square.animation .line-3 {
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+  width: 100%;
+}
+
+.introduction .section-content h1.title .square.animation .line-4 {
+  height: 100%;
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
 }
 
 .introduction .section-content h2 {
