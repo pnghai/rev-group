@@ -94,13 +94,14 @@
         <div class="container-section">
           <div class="group-title d-sm-flex">
             <h4 class="title title-section w-50">News</h4>
-            <a href="" class="btn-view-all w-50 d-block text-center">
+            <a href="./news.html" class="btn-view-all w-50 d-block text-center">
               <span><i class="fas fa-chevron-right"></i></span>
               <span>View all</span></a>
           </div>
         </div>
         <div class="article-list row">
-          <div class="col-md-4">
+          <div id="news-items"></div>
+          <!-- <div class="col-md-4">
             <article class="wow fadeInRight">
               <div class="img-wrapper box-shadow">
                 <a href=""><img src="./assets/images/news1.png" alt="" class="img-fluid"></a>
@@ -135,7 +136,7 @@
                 <div class="brief">Launched its free point-of-sale solution...</div>
               </div>
             </article>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -539,7 +540,22 @@
       </div>
     </footer>
     <button onClick="toTop()" id="to-top" title="Go to top"><i class="far fa-arrow-alt-circle-up"></i></button>
-
+    <div class="modal fade modal-news-details" id="modal-news-detail" tabindex="-1" role="dialog" aria-labelledby="modal-video" aria-hidden="true" >
+      <div class="modal-dialog modal-lg modal-lg-extra modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="img-wrapper text-center"><img src="" alt="" class="img-fluid" style="max-width: 300px; margin: 0 auto; padding: 10px; "></div>
+          <div class="modal-header">
+            <h4 class="modal-title text-center d-block w-100 p-4">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body text-justify">
+            Modal body..
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
