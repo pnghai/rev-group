@@ -732,6 +732,11 @@ section .title-section {
   padding-top: 10px;
 }
 
+.map .services .service-item .img-wrapper img {
+  border-radius: 20px;
+  box-shadow: 0 0 4px 0 #ccc;
+}
+
 .testimonial .swiper-testimonial {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -915,12 +920,19 @@ section .title-section {
   color: #FFC02F;
 }
 
+section.has-particles .particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .rev-group {
   position: relative;
   overflow: hidden;
 }
 
-.rev-group #particles-js {
+.rev-group .particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
