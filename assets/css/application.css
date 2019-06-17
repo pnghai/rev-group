@@ -728,7 +728,7 @@ section .title-section {
 }
 
 .map .services .service-item .img-wrapper {
-  width: 120px;
+  max-width: 140px;
   padding-top: 10px;
 }
 
