@@ -728,11 +728,19 @@ section .title-section {
 }
 
 .map .services .service-item .img-wrapper {
-  width: 100px;
+  width: 120px;
   padding-top: 10px;
 }
 
 .map .services .service-item .img-wrapper img {
+  max-width: 100%;
+}
+
+.map .services .service-item .img-wrapper.small {
+  width: 70px;
+}
+
+.map .services .service-item .img-wrapper .img-border {
   border-radius: 20px;
   box-shadow: 0 0 4px 0 #ccc;
 }

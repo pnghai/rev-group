@@ -751,9 +751,15 @@ section {
         margin-bottom: 0;
       }
       .img-wrapper {
-        width: 100px;
+        width: 120px;
         padding-top: 10px;
         img {
+          max-width: 100%;
+        }
+        &.small {
+          width: 70px;
+        }
+        .img-border {
           border-radius: 20px;
           box-shadow: 0 0 4px 0 #ccc;
         }
