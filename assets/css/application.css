@@ -1261,6 +1261,18 @@ footer a .img-wrapper {
   font-size: 10px !important;
 }
 
+#WS-ScroLi [class^="item"]:last-child.reading.past {
+  color: #ff8600;
+}
+
+#WS-ScroLi [class^="item"]:last-child.reading.past .time-point, #WS-ScroLi [class^="item"]:last-child.reading.past span, #WS-ScroLi [class^="item"]:last-child.reading.past i {
+  color: #ff8600 !important;
+}
+
+#WS-ScroLi [class^="item"]:last-child.reading.past .line-animation {
+  background-color: #ff8600 !important;
+}
+
 #WS-ScroLi .time-point {
   font-size: 14px;
   padding: 5px;

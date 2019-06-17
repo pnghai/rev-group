@@ -50,7 +50,7 @@
                             lineAnimation( app.find(`.item-${index}`) );
                         }
                         else {
-                            app.find(`.item-${index}`).addClass('past').css( returnIcon( 'past' ) )
+                            app.find(`.item-${index}`).removeClass('current').addClass('past').css( returnIcon( 'past' ) )
                                 .find('.icon').css( 'color', options.icon.colorPast );
                         
                         }
@@ -68,7 +68,7 @@
                             .find('.icon').css( 'color', options.icon.color );
                     }
                     else {
-                        app.find(`.item-${elems.length+1}`).addClass(['reading', 'current', 'past']).css( returnIcon( 'current' ) )
+                        app.find(`.item-${elems.length+1}`).removeClass(['reading', 'current', 'past']).css( returnIcon( 'off' ) )
                             .find('.icon').css( 'color', options.icon.colorOff );
                     }
                 }

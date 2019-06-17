@@ -1370,6 +1370,15 @@ footer {
   i {
     font-size: 10px !important; 
   }
+  &:last-child.reading.past {
+      color: rgb(255, 134, 0);
+      .time-point, span, i {
+        color: rgb(255, 134, 0) !important;
+      }
+      .line-animation {
+        background-color: rgb(255, 134, 0) !important;
+      }
+  }
 }
 #WS-ScroLi .time-point {
   font-size: 14px;
