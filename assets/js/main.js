@@ -63,7 +63,7 @@ function showNewsModal(){
 }
 function get_news(key, news_id){
   $.ajax({
-    url: "https://prod-staging.revollet.io/api/v2/news",
+    url: "https://prod-staging.revollet.io/api/v2/news?per_page=3",
     type: "GET",
     headers: {
       'Authorization': key,

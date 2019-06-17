@@ -728,13 +728,8 @@ section .title-section {
 }
 
 .map .services .service-item .img-wrapper {
-  height: 40px;
+  width: 100px;
   padding-top: 10px;
-}
-
-.map .services .service-item .img-wrapper img {
-  height: 100%;
-  width: auto;
 }
 
 .testimonial .swiper-testimonial {
