@@ -36,25 +36,28 @@
             function calcDist() {
                 let scroll = $(document).scrollTop() ;
                 for (let i = 0; i < elems.length; i++) {
-                    let topElem = elems[i].offset().top;
+                    let topElem = elems[i].offset().top - 100;
                     let h_elem = elems[i].outerHeight();
                     let index = i+1;
 
                     // for items ( i=0, index=1 : .item-index)
                     if ( scroll > topElem  ) {
                         // si dans la section
-                        if ( scroll < topElem + h_elem) {
+                        if ( scroll < topElem + h_elem ) {
                             app.find(`.item-${index}`).addClass(['current','reading']).removeClass('past');
                             app.find(`.item-${index}`).css( returnIcon( 'current' ) )
                                 .find('.icon').css( 'color', options.icon.color );
                             lineAnimation( app.find(`.item-${index}`) );
                         }
                         else {
-                            app.find(`.item-${index}`).removeClass('current').addClass('past').css( returnIcon( 'past' ) )
+                            app.find(`.item-${index}`).addClass('past').css( returnIcon( 'past' ) )
                                 .find('.icon').css( 'color', options.icon.colorPast );
                         
                         }
                     } else if ( scroll < topElem ) {
+                        app.find(`.item-${index}`).removeClass(['current', 'reading', 'past']).css( returnIcon( 'off' ) )
+                            .find('.icon').css( 'color', options.icon.colorOff );
+                    } else {
                         app.find(`.item-${index}`).removeClass(['current', 'reading', 'past']).css( returnIcon( 'off' ) )
                             .find('.icon').css( 'color', options.icon.colorOff );
                     }
@@ -65,7 +68,7 @@
                             .find('.icon').css( 'color', options.icon.color );
                     }
                     else {
-                        app.find(`.item-${elems.length+1}`).removeClass(['reading', 'current', 'past']).css( returnIcon( 'off' ) )
+                        app.find(`.item-${elems.length+1}`).addClass(['reading', 'current', 'past']).css( returnIcon( 'current' ) )
                             .find('.icon').css( 'color', options.icon.colorOff );
                     }
                 }
@@ -234,8 +237,6 @@
                 status      : false,
                 icon        : ''
             },
-            // validEnd : true,
-            // validEndIcon : 'far fa-check',
             position : {
                 x           : ['left', 20],
                 y           : ['top', 20]
@@ -264,6 +265,7 @@
                 [ '#anchor-6', 'fas fa-exclamation' ],
                 [ '#anchor-7', 'fas fa-exclamation' ],
                 [ '#anchor-8', 'fas fa-exclamation' ],
+                [ '#anchor-9', 'fas fa-exclamation' ],
             ],
 
         };
