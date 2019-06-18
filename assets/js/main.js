@@ -73,7 +73,9 @@ function get_news(key, news_id){
       if(data.news.length > 0) {
         var str_news = '';
         $.each(data.news, function(i, news) {
-          str_news += '<div class=\"col-md-4\"><article id=\"card-news-'+news.id+'\" data-news=\"'+news.id+'\"  class=\"wow fadeInRight card-news\"><a data-toggle=\"modal\" data-target=\"#modal-news-detail\" data-news=\"'+news.id+'\" class=\"btn-detail\"><div class=\"img-wrapper box-shadow\"><img src=\"https://prod-staging.revollet.io'+news.photo+'\" alt=\"\" class=\"img-fluid\"></div></a><div class=\"content\"><p class=\"date\">'+news.created_at+'</p><a data-toggle=\"modal\" data-target=\"#modal-news-detail\" data-news=\"'+news.id+'\" class=\"btn-detail\"><h3 class=\"title limit-2-line\">'+news.title+'</h3></a><div class=\"brief\">'+news.description+'</div></div><div class=\"hidden news-description\" data-news=\"'+news.id+'\">'+news.body+'</div></article></div>';
+          let d = new Date(news.created_at);
+          let date = d.getFullYear()+"-"+d.getMonth() + "-" + d.getDate();
+          str_news += '<div class=\"col-md-4\"><article id=\"card-news-'+news.id+'\" data-news=\"'+news.id+'\"  class=\"wow fadeInRight card-news\"><a data-toggle=\"modal\" data-target=\"#modal-news-detail\" data-news=\"'+news.id+'\" class=\"btn-detail\"><div class=\"img-wrapper box-shadow\"><img src=\"https://prod-staging.revollet.io'+news.photo+'\" alt=\"\" class=\"img-fluid\"></div></a><div class=\"content\"><p class=\"date\">'+date+'</p><a data-toggle=\"modal\" data-target=\"#modal-news-detail\" data-news=\"'+news.id+'\" class=\"btn-detail\"><h3 class=\"title limit-2-line\">'+news.title+'</h3></a><div class=\"brief\">'+news.description+'</div></div><div class=\"hidden news-description\" data-news=\"'+news.id+'\">'+news.body+'</div></article></div>';
         });
         $("#"+news_id).html(str_news)
       }
